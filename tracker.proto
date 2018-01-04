@@ -1,0 +1,14 @@
+syntax = "proto2";
+
+package anomalytracker;
+
+message Anomaly {
+    required string          id = 1;
+    required string          system = 2;
+    required string          type = 3;
+    required string          name = 4;
+    required int64           internal_id = 5;
+    required int64           user_id = 6;
+    required int64           group_id = 7;
+    required string          created = 8;
+}

@@ -1,0 +1,9 @@
+version: "2"
+
+services:
+  proto-builder:
+    image: znly/protoc
+    volumes:
+      - .:/proto-gen
+    working_dir: "/proto-gen"
+    command: --go_out=. -I. tracker.proto
