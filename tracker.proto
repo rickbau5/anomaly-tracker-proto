@@ -1,14 +1,16 @@
-syntax = "proto2";
+syntax = "proto3";
 
 package anomalytracker;
 
+import "google/protobuf/timestamp.proto";
+
 message Anomaly {
-    required string          id = 1;
-    required string          system = 2;
-    required string          type = 3;
-    required string          name = 4;
-    required int64           internal_id = 5;
-    required int64           user_id = 6;
-    required int64           group_id = 7;
-    required string          created = 8;
+    string id          = 1;
+    string system      = 2;
+    string type        = 3;
+    string name        = 4;
+    int64  internal_id = 5;
+    int64  user_id     = 6;
+    int64  group_id    = 7;
+    google.protobuf.Timestamp created = 8;
 }
