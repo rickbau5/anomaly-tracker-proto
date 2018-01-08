@@ -13,4 +13,5 @@ message Anomaly {
     int64  user_id     = 6;
     int64  group_id    = 7;
     google.protobuf.Timestamp created = 8;
+    bool   editable    = 9;
 }
